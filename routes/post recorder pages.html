@@ -1,0 +1,22 @@
+/**
+ * POST recorder pages
+ */
+ 
+router.post('/reorder-pages',async function(req, res){
+    // console.log(req.body)
+     var ids = req.body['id[]'];
+    // var count =0;
+ 
+     for (var i=0; i<ids.length; i++){
+        // console.log(ids[i])
+     var id = ids[i];
+      //   count++; 
+      //   (function(count){
+      var page= await Page.findById(id);
+         page.sorting =i;
+                 page.save();
+                 //     if(err)
+                 //     return console.log(err);
+                 // });
+          
+       //  });

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Panton Bakery</title>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css/">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="00nav">
+        <div class="center_logo">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                       <!-- ******* <a class="nav-link first-l" href="./about.html">About</a>*小心******** -->
+                       <!-- ******* <a class="nav-link second-l" href="./menu.html">Menu</a>小心******** -->
+                       <!-- ******* <a class="nav-link third-l" href="./contact.html">Contact Us</a>小心******** -->
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+                    <!-- test git compare 2 -->
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                             <!-- *******   <a class="nav-link " href="./order.html">小心******** --><img src="./image/shopping_cart.svg" width="20px"
+                                    alt=""><span class="cart-icon">0</span></a>
+                                    <% pages.forEach(function(page){ %>
+                                        <li><a href="<%= page.slug %>"<%= page.title %></a></li>
+                                    <% }); %>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Logo fix at the center -->
+                <div class="nav-logo">
+                   <!-- *******     <a href="./index.html">小心******** --><img src="./image/logo_bg.svg" alt="" width="100px"></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</nav>
+
+    <!-- *************Where Content Start************* -->
+
+    <!-- #01home Home Start -->
+    <section id="01home">
+        <div class="content-container">
+            <!-- Home welcome image -->
+            <div class="px-4">
+                <img src="./image/home_bg.jpg" width="100%" height="60%">
+            </div>
+            <!-- Top Picks Container -->
+            <div class="top-pack d-flex flex-column p-4 align-items-center">
+                <!-- Title -->
+                <h1 class="m-1">Our <span>Top</span> Picks</h1>
+                <!-- Product image  -->
+                <div class="d-flex flex-row justify-content-around">
+                    <div class="card text-center m-3" style="width: 16rem;">
+                        <img class="card-img-top" src="./image/top_pick_01.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title card-odd">Strawberry Macaron</h5>
+                        </div>
+                    </div>
+                    <div class="card text-center m-3" style="width: 16rem;">
+                        <img class="card-img-top" src="./image/top_pick_02.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title card-even">chocolate Lava Cookies</h5>
+                        </div>
+                    </div>
+                    <div class="card text-center m-3" style="width: 16rem;">
+                        <img class="card-img-top" src="./image/top_pick_03.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title card-odd">Mixed Coffee Macaron</h5>
+                        </div>
+                    </div>
+                    <div class="card text-center m-3" style="width: 16rem;">
+                        <img class="card-img-top" src="./image/top_pick_04.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title card-even">Snow Snow Candy Balls</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- menu container -->
+            <div class="home-menu d-flex flex-column p-4 align-items-center">
+                <!-- Title -->
+                <h1 class="m-3">Try Our Our <span>Full</span> Menu</h1>
+                <!-- link to menu icon -->
+                    <!-- ********<a class="m-3" href="./menu.html">小心******** --><img src="./image/link_to_menu.svg" alt=""></a>
+                <!-- detail container -->
+                <div class="detail-container m-3 d-flex flex-row">
+                    <div class="detail d-flex flex-column m-3 p-3 align-items-center">
+                        <img class="m-3" src="./image/detail_01.svg" width="65rem">
+                        <h5 class="first">Freshly Bake Everyday</h5>
+                    </div>
+                    <div class="detail d-flex flex-column m-3 p-3 align-items-center">
+                        <img class="m-3" src="./image/detail_02.svg" width="65rem">
+                        <h5 class="second">Free Local Delivery Over HKD 300</h5>
+                    </div>
+                    <div class="detail d-flex flex-column m-3 p-3 align-items-center">
+                        <img class="m-3" src="./image/detail_03.svg" width="65rem">
+                        <h5 class="third">Massive Production Available on request</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #01home Home End -->
+
+</body>
+<!---->

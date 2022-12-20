@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panton Bakery</title>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->  
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="index.css">
+  <!-- CSS merge into final index.css when complete -->
+</head>
+<body>
+
+<!-- #00nav  Navbar Start-->
+<div id="00nav">
+    <div class="center_logo">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-cus">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link first-l" href="./about.html">About</a>
+                <a class="nav-link second-l" href="./menu.html">Menu</a>
+                <a class="nav-link third-l" href="./contact.html">Contact Us</a>
+            </div>
+            </div>
+            <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link " href="./order.html"><img src="./image/shopping_cart.svg" width="20px" alt=""><span
+                        class="cart-icon">0</span></a>  
+                    </li>
+                </ul>
+            </div>
+                <!-- Logo fix at the center -->
+        <div class="nav-logo">
+            <a href="./index.html"><img src="./image/logo_bg.svg" alt="" width="100px"></a>
+        </div>
+        </nav>
+    </div>
+</div>
+
+<!-- #00nav Navbar end -->
+
+
+<section id="0401checkout" class="p-5">
+  <div class="checkout-container d-flex flex-row justify-content-around">
+      <div class="form-container d-block">
+          <h1 class="text-center py-3">Checkout Form</h1>
+          <div class="container">                
+                 <div class="row">
+                   <div class="col-50">
+                     <h3>Billing Address</h3>
+                     <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                     <input type="text" id="fname" name="firstname" pattern="[a-zA-Z][a-zA-Z0-9-_.\s]{1,20}" placeholder="John M. Doe" required>
+                     <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                     <input type="text" id="email" name="email" placeholder="john@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                     <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                     <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" pattern="[a-zA-Z0-9-_.\s]" required>
+                     <label for="city"><i class="fa fa-institution"></i> City</label>
+                     <input type="text" id="city" name="city" placeholder="New York" pattern="[a-zA-Z\s]" required>
+         
+                     <div class="row">
+                       <div class="col-50">
+                         <label for="state">State</label>
+                         <input type="text" id="state" name="state" pattern="[a-zA-Z\s]" placeholder="NY" required>
+                       </div>
+                       <div class="col-50">
+                         <label for="zip">Zip</label>
+                         <input type="text" id="zip" name="zip" pattern="[0-9]{5}"placeholder="10001" required>
+                       </div>
+                     </div>
+                   </div>
+         
+                   <div class="col-50">
+                     <h3>Payment</h3>
+                     <label for="fname">Accepted Cards</label>
+                     <div class="icon-container">
+                       <img class="mx-3" src="./image/visa.png" alt="Visa" width="45px">
+                       <img class="mx-3" src="./image/symbols.png" alt="AE" width="45px">
+                       <img class="mx-3" src="./image/paypal-logo.png" alt="Paypal" width="45px">
+                     </div>
+                     <label for="cname">Name on Card</label>
+                     <input type="text" id="cname" name="cardname" pattern="[a-zA-Z\s]{50}" placeholder="John More Doe" required>
+                     <label for="ccnum">Credit card number</label>
+                     <input type="text" id="ccnum" name="cardnumber" pattern="\d{4}[- /.]\d{4}[- /.]\d{4}[- /.]\d{4}" maxlength="19" placeholder="1111-2222-3333-4444" required>
+                     <div class="row">
+                       <div class="col-50">
+                         <label>Expiration Date</label>
+                         <input type="text" id="expdate" name="expDate" pattern="(0[1-9]|1[012])[/](2[1-9]|[345][0-9])" maxlength="5" placeholder="MM/DD" required>
+                       </div>
+                       <div class="col-50">
+                         <label for="cvv">CVV</label>
+                         <input type="text" id="cvv" pattern="[0-9]{3}" maxlength="3" name="cvv" placeholder="352" required>
+                       </div>
+                     </div>
+                   </div>
+                   
+                 </div>
+                 <label>
+                   <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                 </label>
+                 <!-- <input type="submit" value="Continue to checkout" class="btn"> -->
+                 
+                 <button class="btn" onclick="gopayment()">Submit</button>
+                 
+              <!--  </form> -->
+              </div>
+           </div>
+          <div class="cart-container">
+              <div class="col-50">
+                  <h1 class="text-center py-3 first-l">Cart</h1>
+                  <div id="chkoutfrm" class="container chkoutcartitems">    
+                  <br>
+                  </div>
+              </div>
+          </div>
+  </div>
+</section>
+
+
+</body>
+<!-- Start footer -->
+<footer>
+    <div class="d-flex flex-row justify-content-between footer p-5 align-items-center">
+        <div>
+            <a href="./index.html"><img src="./image/logo_bg.svg" alt="" width="130px"></a>
+        </div>
+        <div class="d-flex flex-row justify-content-between align-items-start">
+            <!-- Shop details -->
+            <div class="d-flex flex-row align-items-start justify-content-between">
+                <div class="text-left">
+                    <h6>Visit Our Store: </h6>
+                    <p >Blk. F.12/F. Comfort Bldg.</p>
+                    <p >88 Nathan Road,</p>
+                    <p >Central,Hongkong</p>
+                </div>
+                <div class="text-left mx-5">
+                    <h6>Opening Hours: </h6>
+                    <p>Mon - Fri : 08:00 - 20:00</p>
+                    <p>Sat - Sun : 11:00 - 21:00</p>
+                </div>
+            </div>
+            <!-- Social Media -->
+            <div class="d-flex flex-column align-items-start justify-content-between">
+                <h6>Find Us: </h6>
+                <div class="d-flex flex-rwo">
+                    <a href="https://www.instagram.com/"><img src="./image/Instagram.svg" alt="Instagram" width="35px"></a>
+                    <a class="mx-5" href="https://www.facebook.com/"><img src="./image/facebook.svg" alt="Facebook" width="35px"></a>
+                    <a href="https://wa.me/15551234567"><img src="./image/whatsapp.svg" alt="Whatsapp" width="35px"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End of footer  -->
+
+<!-- ********start of JS and export as cart.js after testing ******** -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
+<script src="chkout.js"></script>
+</html>
+

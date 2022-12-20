@@ -1,0 +1,19 @@
+<%- include('./_layouts/header')%>
+
+<h1><%= title %></h1>
+
+<form method="post" action="/users/login"><!--/admin/pages/-->
+
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Username">
+    </div>
+
+        
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+ 
+    <button type = "submit" class="btn btn-default">Login</button>
+<%- include('./_layouts/footer')%>
